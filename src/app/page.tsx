@@ -1,65 +1,65 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { Calculator, CalendarDays, ShieldCheck } from 'lucide-react';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="max-w-6xl mx-auto pt-32 pb-24 px-6 md:px-8 space-y-16 hero-gradient relative">
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-brand-100 rounded-full blur-3xl opacity-50 -z-10 animate-pulse"></div>
+      <div className="absolute top-0 right-0 translate-x-1/3 -translate-y-1/3 w-[500px] h-[500px] bg-sand-100 rounded-full blur-3xl opacity-40 -z-10 animate-pulse"></div>
+      
+      <div className="text-center space-y-6 animate-up">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs tracking-wide uppercase font-medium mb-4">
+          <span className="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+          Transparansi Perpajakan Indonesia
+        </div>
+        <h1 className="font-serif text-5xl md:text-7xl tracking-tight text-brand-900 leading-[1.1] font-medium">
+          Hitung Pajak <br />
+          <i className="italic text-brand-600">Lebih Menenangkan</i>
+        </h1>
+        <p className="text-lg md:text-xl text-brand-700/80 max-w-2xl mx-auto leading-relaxed font-light mt-4">
+          PajakKu adalah proyek open-source edukasi untuk membantu Anda memahami estimasi beban pajak dan mengambil keputusan finansial yang lebih baik antara Orang Pribadi atau Badan Usaha.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8 pt-4">
+          <Link href="/calculator" className="px-8 py-4 bg-brand-800 text-white rounded-2xl font-medium hover:bg-brand-900 transition-colors shadow-lg shadow-brand-500/20 text-center w-full sm:w-auto">
+            Coba Kalkulator Pajak
+          </Link>
+          <Link href="/calendar" className="px-8 py-4 bg-white text-brand-800 border border-brand-200 rounded-2xl font-medium hover:bg-brand-50 transition-colors text-center w-full sm:w-auto">
+            Lihat Kalender Edukasi
+          </Link>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-32 animate-up delay-100">
+        <div className="p-8 rounded-3xl bg-white border border-sand-100 shadow-sm hover:shadow-xl hover:shadow-brand-200/40 hover:-translate-y-1 transition-all duration-300">
+          <div className="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6 border border-brand-100">
+            <Calculator className="w-7 h-7" />
+          </div>
+          <h3 className="font-serif text-2xl font-medium text-brand-900 mb-2">Simulasi Akurat</h3>
+          <p className="text-brand-600/80 font-light leading-relaxed">
+            Bandingkan beban pajak antara Orang Pribadi dan PT/CV secara instan berdasarkan target laba bersih dan status PTKP Anda.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="p-8 rounded-3xl bg-white border border-sand-100 shadow-sm hover:shadow-xl hover:shadow-brand-200/40 hover:-translate-y-1 transition-all duration-300">
+          <div className="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6 border border-brand-100">
+            <CalendarDays className="w-7 h-7" />
+          </div>
+          <h3 className="font-serif text-2xl font-medium text-brand-900 mb-2">Kalender Kepatuhan</h3>
+          <p className="text-brand-600/80 font-light leading-relaxed">
+            Pantau jadwal penting pembayaran dan pelaporan SPT bulanan hingga tahunan agar Anda selalu patuh tepat waktu.
+          </p>
         </div>
-      </main>
+
+        <div className="p-8 rounded-3xl bg-white border border-sand-100 shadow-sm hover:shadow-xl hover:shadow-brand-200/40 hover:-translate-y-1 transition-all duration-300">
+          <div className="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6 border border-brand-100">
+            <ShieldCheck className="w-7 h-7" />
+          </div>
+          <h3 className="font-serif text-2xl font-medium text-brand-900 mb-2">Adaptasi Lokal</h3>
+          <p className="text-brand-600/80 font-light leading-relaxed">
+            Meniru inspirasi dari opentaxation, versi ini disesuaikan sepenuhnya dengan peraturan UU HPP dan PPh terbaru di Indonesia.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
