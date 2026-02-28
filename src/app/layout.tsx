@@ -10,6 +10,30 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-serif'
 export const metadata: Metadata = {
   title: 'PajakKu | Perbandingan Pajak Pribadi & Badan',
   description: 'Hitung perbandingan beban pajak secara jujur, efisien, dan menenangkan.',
+  keywords: ['Pajak', 'Kalkulator Pajak', 'Pajak Pribadi', 'Pajak Badan', 'PTKP', 'PPh 21', 'Pajak Indonesia'],
+  authors: [{ name: 'OpenTaxation ID' }],
+  openGraph: {
+    title: 'PajakKu | Perbandingan Pajak Pribadi & Badan',
+    description: 'Hitung perbandingan beban pajak secara jujur, efisien, dan menenangkan.',
+    url: 'https://opentaxation.id',
+    siteName: 'PajakKu',
+    images: [
+      {
+        url: '/thumbnail.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'PajakKu Preview',
+      },
+    ],
+    locale: 'id_ID',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PajakKu | Perbandingan Pajak Pribadi & Badan',
+    description: 'Hitung perbandingan beban pajak secara jujur, efisien, dan menenangkan.',
+    images: ['/thumbnail.jpeg'],
+  },
 };
 
 export default function RootLayout({
